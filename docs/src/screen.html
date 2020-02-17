@@ -1,0 +1,390 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>screen使用 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="leanote.html" />
+    
+    
+    <link rel="prev" href="ssh.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    About
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Chap01 Linux配置</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="linux-setting.html">
+            
+                <a href="linux-setting.html">
+            
+                    
+                    安装配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Chap02 Linux应用</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="wkhtmltopdf.html">
+            
+                <a href="wkhtmltopdf.html">
+            
+                    
+                    网页pdf导出
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="pandoc.html">
+            
+                <a href="pandoc.html">
+            
+                    
+                    格式转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="latex.html">
+            
+                <a href="latex.html">
+            
+                    
+                    latex应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Chap03 VPS应用</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="ssh.html">
+            
+                <a href="ssh.html">
+            
+                    
+                    ssh登录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.2" data-path="screen.html">
+            
+                <a href="screen.html">
+            
+                    
+                    screen使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="leanote.html">
+            
+                <a href="leanote.html">
+            
+                    
+                    部署蚂蚁笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="other.html">
+            
+                <a href="other.html">
+            
+                    
+                    其它应用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >screen使用</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="screen&#x4F7F;&#x7528;">screen&#x4F7F;&#x7528;</h1>
+<p><a href="https://www.cnblogs.com/mchina/archive/2013/01/30/2880680.html" target="_blank">linux screen &#x547D;&#x4EE4;&#x8BE6;&#x89E3;</a></p>
+<p><strong>&#x5728;&#x6BCF;&#x4E2A;screen session &#x4E0B;&#xFF0C;&#x6240;&#x6709;&#x547D;&#x4EE4;&#x90FD;&#x4EE5; ctrl+a(C-a) &#x5F00;&#x59CB;&#x3002;</strong>
+C-a ? -&gt; &#x663E;&#x793A;&#x6240;&#x6709;&#x952E;&#x7ED1;&#x5B9A;&#x4FE1;&#x606F;
+C-a c -&gt; &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x8FD0;&#x884C;shell&#x7684;&#x7A97;&#x53E3;&#x5E76;&#x5207;&#x6362;&#x5230;&#x8BE5;&#x7A97;&#x53E3;
+C-a n -&gt; Next&#xFF0C;&#x5207;&#x6362;&#x5230;&#x4E0B;&#x4E00;&#x4E2A; window 
+C-a p -&gt; Previous&#xFF0C;&#x5207;&#x6362;&#x5230;&#x524D;&#x4E00;&#x4E2A; window 
+C-a 0..9 -&gt; &#x5207;&#x6362;&#x5230;&#x7B2C; 0..9 &#x4E2A; window
+Ctrl+a [Space] -&gt; &#x7531;&#x89C6;&#x7A97;0&#x5FAA;&#x5E8F;&#x5207;&#x6362;&#x5230;&#x89C6;&#x7A97;9
+C-a C-a -&gt; &#x5728;&#x4E24;&#x4E2A;&#x6700;&#x8FD1;&#x4F7F;&#x7528;&#x7684; window &#x95F4;&#x5207;&#x6362; 
+C-a x -&gt; &#x9501;&#x4F4F;&#x5F53;&#x524D;&#x7684; window&#xFF0C;&#x9700;&#x7528;&#x7528;&#x6237;&#x5BC6;&#x7801;&#x89E3;&#x9501;
+C-a d -&gt; detach&#xFF0C;&#x6682;&#x65F6;&#x79BB;&#x5F00;&#x5F53;&#x524D;session&#xFF0C;&#x5C06;&#x76EE;&#x524D;&#x7684; screen session (&#x53EF;&#x80FD;&#x542B;&#x6709;&#x591A;&#x4E2A; windows) &#x4E22;&#x5230;&#x540E;&#x53F0;&#x6267;&#x884C;&#xFF0C;&#x5E76;&#x4F1A;&#x56DE;&#x5230;&#x8FD8;&#x6CA1;&#x8FDB; screen &#x65F6;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x6B64;&#x65F6;&#x5728; screen session &#x91CC;&#xFF0C;&#x6BCF;&#x4E2A; window &#x5185;&#x8FD0;&#x884C;&#x7684; process (&#x65E0;&#x8BBA;&#x662F;&#x524D;&#x53F0;/&#x540E;&#x53F0;)&#x90FD;&#x5728;&#x7EE7;&#x7EED;&#x6267;&#x884C;&#xFF0C;&#x5373;&#x4F7F; logout &#x4E5F;&#x4E0D;&#x5F71;&#x54CD;&#x3002; 
+C-a z -&gt; &#x628A;&#x5F53;&#x524D;session&#x653E;&#x5230;&#x540E;&#x53F0;&#x6267;&#x884C;&#xFF0C;&#x7528; shell &#x7684; fg &#x547D;&#x4EE4;&#x5219;&#x53EF;&#x56DE;&#x53BB;&#x3002;
+C-a w -&gt; &#x663E;&#x793A;&#x6240;&#x6709;&#x7A97;&#x53E3;&#x5217;&#x8868;
+C-a t -&gt; Time&#xFF0C;&#x663E;&#x793A;&#x5F53;&#x524D;&#x65F6;&#x95F4;&#xFF0C;&#x548C;&#x7CFB;&#x7EDF;&#x7684; load 
+C-a k -&gt; kill window&#xFF0C;&#x5F3A;&#x884C;&#x5173;&#x95ED;&#x5F53;&#x524D;&#x7684; window
+C-a [ -&gt; &#x8FDB;&#x5165; copy mode&#xFF0C;&#x5728; copy mode &#x4E0B;&#x53EF;&#x4EE5;&#x56DE;&#x6EDA;&#x3001;&#x641C;&#x7D22;&#x3001;&#x590D;&#x5236;&#x5C31;&#x50CF;&#x7528;&#x4F7F;&#x7528; vi &#x4E00;&#x6837;
+  C-b Backward&#xFF0C;PageUp 
+  C-f Forward&#xFF0C;PageDown 
+  H(&#x5927;&#x5199;) High&#xFF0C;&#x5C06;&#x5149;&#x6807;&#x79FB;&#x81F3;&#x5DE6;&#x4E0A;&#x89D2; 
+  L Low&#xFF0C;&#x5C06;&#x5149;&#x6807;&#x79FB;&#x81F3;&#x5DE6;&#x4E0B;&#x89D2; 
+  0 &#x79FB;&#x5230;&#x884C;&#x9996; 
+  $ &#x884C;&#x672B; 
+  w forward one word&#xFF0C;&#x4EE5;&#x5B57;&#x4E3A;&#x5355;&#x4F4D;&#x5F80;&#x524D;&#x79FB; 
+  b backward one word&#xFF0C;&#x4EE5;&#x5B57;&#x4E3A;&#x5355;&#x4F4D;&#x5F80;&#x540E;&#x79FB; 
+  Space &#x7B2C;&#x4E00;&#x6B21;&#x6309;&#x4E3A;&#x6807;&#x8BB0;&#x533A;&#x8D77;&#x70B9;&#xFF0C;&#x7B2C;&#x4E8C;&#x6B21;&#x6309;&#x4E3A;&#x7EC8;&#x70B9; 
+  Esc &#x7ED3;&#x675F; copy mode 
+C-a ] -&gt; Paste&#xFF0C;&#x628A;&#x521A;&#x521A;&#x5728; copy mode &#x9009;&#x5B9A;&#x7684;&#x5185;&#x5BB9;&#x8D34;&#x4E0A;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ssh.html" class="navigation navigation-prev " aria-label="Previous page: ssh登录">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="leanote.html" class="navigation navigation-next " aria-label="Next page: 部署蚂蚁笔记">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"screen使用","level":"4.2","depth":1,"next":{"title":"部署蚂蚁笔记","level":"4.3","depth":1,"path":"src/leanote.md","ref":"./src/leanote.md","articles":[]},"previous":{"title":"ssh登录","level":"4.1","depth":1,"path":"src/ssh.md","ref":"./src/ssh.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-comscore"],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"src/screen.md","mtime":"2020-02-17T09:16:37.306Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-17T09:29:39.117Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
+        
+    
+
+    </body>
+</html>
+
