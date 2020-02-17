@@ -1,13 +1,13 @@
 # Summary
 
-* [About](./README.md)
+* [简介](./README.md)
 
 ## Chap01 Linux配置
 * [安装配置](./src/linux-setting.md)
 
 ## Chap02 Linux应用
 * [网页pdf导出](./src/wkhtmltopdf.md)
-* [格式转换](./src/pandoc.md)
+* [pandoc格式转换](./src/pandoc.md)
 * [latex应用](./src/latex.md)
 
 ## Chap03 VPS应用

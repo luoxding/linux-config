@@ -239,7 +239,8 @@ source /etc/profile
 mkdir /data/db
 $ mongod --dbpath /home/night/data/db
 ```
-启动mongodb(后台常驻,需进入mongodb/bin目录中执行)
+*启动mongodb(后台常驻,需进入mongodb/bin目录中执行)
+
 ```
 ./root/mongodb-linux-x86_64-3.0.1/bin/mongod --dbpath=/data/db  --fork --logpath=/data/logs
 & or
@@ -256,11 +257,22 @@ tar -xzvf leanote-linux-amd64-v2.6.1.bin.tar.gz
 导入初始数据
 不可遗漏这步：环境变量
 vi ~/.bash_profile
+
+vi ~/.profile #搬瓦工
+
+export PATH="/root/mongodb-linux-x86_64-3.0.1/bin:$PATH"  #搬瓦工
+
 export PATH="/usr/local/mongodb/bin:$PATH" 
 export PATH="/home/night/mongodb-linux-x86_64-3.0.1/bin:$PATH" 
 /home/night/mongodb-linux-x86_64-3.0.1/bin
 source ~/.bash_profile //保存使配置生效
+
+source ~/.profile //保存使配置生效 #搬瓦工
+
 ```
+#这个路径才正确
+mongorestore -h localhost -d leanote --dir /root/leanote/mongodb_backup/leanote_install_data/
+
 mongorestore -h localhost -d leanote --dir /root/leanote-linux-amd64-v2.6.1.bin/leanote/mongodb_backup/leanote_install_data/
 & or
 mongorestore -h localhost -d leanote --dir /home/night/leanote/mongodb_backup/leanote_install_data/
@@ -269,6 +281,9 @@ mongorestore -h localhost -d leanote --dir /home/night/leanote/mongodb_backup/le
 ```
 nohup bash /~/leanote...../bin/run.sh &
 & or
+cd ~/leanote/bin
+bash run.sh
+#后台常驻
 nohup bash /~/leanote/bin/run.sh &
 ```
 报错处理
@@ -281,3 +296,50 @@ chmod 777 -R dirName
 ./root/mongodb-linux-x86_64-3.0.1/bin/mongod --dbpath=/data/db  --fork --logpath=/data/logs
 nohup bash /root/leanote-linux-amd64-v2.6.1.bin/leanote/bin/run.sh &
 ```
+
+/usr/local/bin/wkhtmltopdf
+
+## 其它参考
+
+[Leanote 蚂蚁笔记 自建私人云服务简单流程 Centos 7.4](https://www.jianshu.com/p/30ecac1b5fa2)
+
+#####  启动 leanote
+
+xxx是指你第一步解压的路径
+
+
+
+```shell
+cd ~/leanote/bin
+bash run.sh
+```
+
+出现以下内容说明成功
+
+
+
+```shell
+...
+TRACE 2013/06/06 15:01:27 watcher.go:72: Watching: /home/life/leanote/bin/src/github.com/leanote/leanote/conf/routes
+Go to /@tests to run the tests.
+Listening on :9000...
+```
+
+附上后台执行命令
+
+
+
+```shell
+nohup bash xxx/leanote/bin/run.sh > logs/leanote.log &
+```
+
+------
+
+### 二、 进阶配置
+
+
+
+作者：zzzmh
+链接：https://www.jianshu.com/p/30ecac1b5fa2
+来源：简书
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。

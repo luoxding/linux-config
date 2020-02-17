@@ -5,11 +5,16 @@
 
 ```
 ssh-keygen -t  rsa
-ssh-copy-id -i ~/.ssh/id_rsa.pub root@192.168.55.232 22
+ssh-copy-id -i ~/.ssh/id_rsa.pub root@104.244.91.31 26654
 #然后输入密码
 ```
 
+scp -p ~/.ssh/id_rsa.pub root@<server ip>:/root/.ssh/authorized_keys
+
+scp -p ./id_rsa.pub root@104.244.91.31:26654:/root/.ssh/authorized_keys
+
 pc端配置
+
 ```
 ~/.ssh/config
 ================
