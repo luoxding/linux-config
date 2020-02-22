@@ -1,6 +1,15 @@
 {
 	"plugins": [
-		"theme-comscore"
-	]
+		"theme-comscore",
+		"auto-summary"
+	],
+    "pluginsConfig": {
+      "auto-summary": {
+        "parts": { 
+           "README.md": "简介",
+           "src/*.md": "Part I 学习笔记",
+		   "code/*.md": "Part II 参考代码"
+        }      
+      }
+	}
 }
-

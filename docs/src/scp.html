@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>网页pdf导出 · GitBook</title>
+        <title>使用scp命令，远程上传下载文件/文件夹 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../code/other.html" />
+    <link rel="next" href="screen.html" />
     
     
-    <link rel="prev" href="VPS.html" />
+    <link rel="prev" href="pandoc.html" />
     
 
     </head>
@@ -232,7 +232,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.10" data-path="scp.html">
+        <li class="chapter active" data-level="2.10" data-path="scp.html">
             
                 <a href="scp.html">
             
@@ -297,7 +297,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.15" data-path="wkhtmltopdf.html">
+        <li class="chapter " data-level="2.15" data-path="wkhtmltopdf.html">
             
                 <a href="wkhtmltopdf.html">
             
@@ -360,7 +360,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >网页pdf导出</a>
+        <a href=".." >使用scp命令，远程上传下载文件/文件夹</a>
     </h1>
 </div>
 
@@ -375,92 +375,28 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="&#x7F51;&#x9875;pdf&#x5BFC;&#x51FA;">&#x7F51;&#x9875;pdf&#x5BFC;&#x51FA;</h1>
-<p>[TOC]</p>
-<h2 id="tarxz&#x5B89;&#x88C5;&#x6559;&#x7A0B;1">tar.xz&#x5B89;&#x88C5;&#x6559;&#x7A0B;1</h2>
-<ul>
-<li>&#x5B89;&#x88C5;wkhtmltopdf</li>
+                                <ul>
+<li><a href="https://www.cnblogs.com/" target="_blank">&#x535A;&#x5BA2;&#x56ED;</a></li>
+<li><a href="https://www.cnblogs.com/tectal/" target="_blank">&#x9996;&#x9875;</a></li>
+<li><a href="https://i.cnblogs.com/EditPosts.aspx?opt=1" target="_blank">&#x65B0;&#x968F;&#x7B14;</a></li>
+<li><a href="https://msg.cnblogs.com/send/&#x6768;&#x56FD;&#x5CF0;" target="_blank">&#x8054;&#x7CFB;</a></li>
+<li><a href="https://www.cnblogs.com/tectal/rss/" target="_blank">&#x8BA2;&#x9605;</a></li>
+<li><a href="https://i.cnblogs.com/" target="_blank">&#x7BA1;&#x7406;</a></li>
 </ul>
-<blockquote>
-<p>&#x7ECF;&#x6D4B;&#x8BD5;&#x53EA;&#x6709;&#x8FD9;&#x65B9;&#x6CD5;&#x6210;&#x529F;</p>
-</blockquote>
-<pre><code>wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.4/wkhtmltox-0.12.4_linux-generic-amd64.tar.xz
-tar -xvf wkhtmltox-0.12.4_linux-generic-amd64.tar.xz
-cd wkhtmltox/bin
-chmod +x wkhtmltopdf
-#&#x79FB;&#x52A8;&#x8FC7;&#x53BB;
-mv wkhtmltopdf /usr/local/bin
-</code></pre><ul>
-<li>&#x6D4B;&#x8BD5;&#x662F;&#x5426;&#x5B89;&#x88C5;&#x6210;&#x529F;</li>
-</ul>
-<pre><code>wkhtmltopdf http://www.baidu.com ./baidu.pdf
-</code></pre><p>&#x9519;&#x8BEF;
-wkhtmltopdf: error while loading shared libraries: libXrender.so.1: cannot open shared object file: No such file or directory</p>
-<p>&#x62A5;&#x9519;&#x89E3;&#x51B3;</p>
-<pre><code>linux wkhtmltopdf &#x6267;&#x884C; ./wkhtmltopdf --version  &#x62A5;&#x9519; 
-
-./wkhtmltopdf: error while loading shared libraries: libXrender.so.1: cannot open shared object file: No such file or directory&#xFF0C;&#x6267;&#x884C; apt-get/yum install libXrender*  
-
-apt-get install libXrender*
-
-&#x8FD0;&#x884C; wkhtmltopdf &#x62A5;wkhtmltopdf: error while loading shared libraries: libfontconfig.so.1: cannot open shared object file: No such file or directory&#x8FD9;&#x4E2A;&#x9519;&#xFF0C;&#x8BF7;&#x8FD0;&#x884C;apt-get/yum install libfontconfig*
-
-apt-get install libfontconfig*
-
-&#x8FD0;&#x884C; wkhtmltopdf &#x62A5;wkhtmltopdf: error while loading shared libraries: libXext.so.6: cannot open shared object file: No such file or directory&#x8FD9;&#x4E2A;&#x9519;&#xFF0C;&#x8BF7;&#x8FD0;&#x884C; apt-get/yum install libXext*
-
-apt-get install libXext*
-</code></pre><blockquote>
-<p>&#x5BFC;&#x51FA;&#x7684;PDF&#x4E2D;&#x6587;&#x4F1A;&#x4E71;&#x7801;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x627E;&#x5230;windows&#x91CC;C:\Windows\Fonts&#x6587;&#x4EF6;&#x5939;&#x4E2D;&#x7684;&#x5B8B;&#x4F53;&#x6216;&#x8005;&#x5FAE;&#x8F6F;&#x96C5;&#x9ED1;&#x5B57;&#x4F53;&#xFF0C;&#x4E0A;&#x4F20;&#x5230;&#x670D;&#x52A1;&#x5668;/usr/share/fonts/&#x76EE;&#x5F55;&#x4E0B;&#x5373;&#x53EF;&#x3002;
-wget <a href="https://github.com/taoyunxing/github_test/raw/8c3233a7c236075608d56a4805b72a924b1028f7/linux_fonts/msyh.ttc" target="_blank">https://github.com/taoyunxing/github_test/raw/8c3233a7c236075608d56a4805b72a924b1028f7/linux_fonts/msyh.ttc</a> </p>
-</blockquote>
-<p>cp msyh.ttc /usr/share/fonts/</p>
-<p>&#x5B89;&#x88C5;&#x8DEF;&#x5F84;&#x5F15;&#x7528;&#x53C2;&#x8003;</p>
-<pre><code>/usr/bin/wkhtmltopdf
-/c/Program Files/wkhtmltopdf/bin/wkhtmltopdf
-</code></pre><h3 id="wkhtmltopdf&#x7684;&#x5B89;&#x88C5;&#x4E0E;&#x4F7F;&#x7528;2">Wkhtmltopdf&#x7684;&#x5B89;&#x88C5;&#x4E0E;&#x4F7F;&#x7528;2</h3>
-<p>1.&#x4E0B;&#x8F7D;
-&#x5230;<a href="https://wkhtmltopdf.org/downloads.html&#x4E0B;&#x8F7D;stable&#xFF08;&#x7A33;&#x5B9A;&#x7248;&#xFF09;Linux" target="_blank">https://wkhtmltopdf.org/downloads.html&#x4E0B;&#x8F7D;stable&#xFF08;&#x7A33;&#x5B9A;&#x7248;&#xFF09;Linux</a>  64-bit&#x6216;&#x8005;32-bit&#xFF08;&#x6839;&#x636E;&#x81EA;&#x8EAB;&#x7CFB;&#x7EDF;&#x9009;&#x62E9;&#xFF09;</p>
-<p>2.&#x89E3;&#x538B;
-64&#xFF1A;tar -xvf wkhtmltox-0.12.4_linux-generic-amd64.tar.xz
-32&#xFF1A;tar -xvzf wkhtmltox-0.12.4_linux-generic-i386.tar.xz</p>
-<p>3.&#x62F7;&#x8D1D;&#x7A0B;&#x5E8F;
-cp wkhtmltox/bin/wkhtmltopdf /usr/bin/
-&#x5C06;&#x7A0B;&#x5E8F;&#x62F7;&#x8D1D;&#x5230;/usr/bin/&#x76EE;&#x5F55;&#x4E2D;&#xFF0C;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x4EFB;&#x610F;&#x76EE;&#x5F55;&#x6267;&#x884C;&#x3002;</p>
-<p>4.&#x4F7F;&#x7528;
-wkhtmltopdf [&#x9009;&#x9879;] &#x6587;&#x4EF6;&#x6E90;&#x5730;&#x5740; &#x6587;&#x4EF6;&#x76EE;&#x6807;&#x5730;&#x5740;
-wkhtmltopdf <a href="http://www.wpbeginner.com/plugins/7-best-wordpress-backup-plugins-compared-pros-and-cons/" target="_blank">http://www.wpbeginner.com/plugins/7-best-wordpress-backup-plugins-compared-pros-and-cons/</a> 7-best-wordpress-backup.pdf</p>
-<p>5.&#x4E2D;&#x6587;&#x95EE;&#x9898;
-&#x5982;&#x679C;wkhtmltopdf&#x4E2D;&#x6587;&#x663E;&#x793A;&#x7A7A;&#x767D;&#x6216;&#x8005;&#x4E71;&#x7801;&#x65B9;&#x6846;&#xFF0C;&#x6253;&#x5F00;windows c:\Windows\fonts\simsun.ttc&#xFF08;&#x5728;&#x7F51;&#x4E0A;&#x4E0B;&#x8F7D;simsun.ttc&#x4E5F;&#x53EF;&#x4EE5;&#xFF09;&#x62F7;&#x8D1D;&#x5230;linux&#x670D;&#x52A1;&#x5668;/usr/share/fonts/&#x76EE;&#x5F55;&#x4E0B;,&#x518D;&#x6B21;&#x751F;&#x6210;pdf&#x4E2D;&#x6587;&#x663E;&#x793A;&#x6B63;&#x5E38;
-&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;&#x2014;
-&#x7248;&#x6743;&#x58F0;&#x660E;&#xFF1A;&#x672C;&#x6587;&#x4E3A;CSDN&#x535A;&#x4E3B;&#x300C;tianlunshu&#x300D;&#x7684;&#x539F;&#x521B;&#x6587;&#x7AE0;&#xFF0C;&#x9075;&#x5FAA; CC 4.0 BY-SA &#x7248;&#x6743;&#x534F;&#x8BAE;&#xFF0C;&#x8F6C;&#x8F7D;&#x8BF7;&#x9644;&#x4E0A;&#x539F;&#x6587;&#x51FA;&#x5904;&#x94FE;&#x63A5;&#x53CA;&#x672C;&#x58F0;&#x660E;&#x3002;
-&#x539F;&#x6587;&#x94FE;&#x63A5;&#xFF1A;<a href="https://blog.csdn.net/tianlunshu/article/details/69946656" target="_blank">https://blog.csdn.net/tianlunshu/article/details/69946656</a></p>
-<h2 id="deb&#x5B89;&#x88C5;&#x6559;&#x7A0B;">deb&#x5B89;&#x88C5;&#x6559;&#x7A0B;</h2>
-<pre><code>wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.bionic_amd64.deb
-</code></pre><h1 id="ubuntu-&#x5B89;&#x88C5;-wkhtmltopdf-&#x7684;&#x65B9;&#x6CD5;"><a href="https://www.cnblogs.com/myvic/p/10615962.html" target="_blank">ubuntu &#x5B89;&#x88C5; wkhtmltopdf &#x7684;&#x65B9;&#x6CD5;</a></h1>
-<pre><code>wget https://downloads.wkhtmltopdf.org/0.12/0.12.5/wkhtmltox_0.12.5-1.xenial_amd64.deb
-</code></pre><p>2.&#x5B89;&#x88C5;&#x4F9D;&#x8D56;&#xFF1A;</p>
-<p>sudo apt-get install libxfont1 xfonts-encodings xfonts-utils xfonts-base xfonts-75dpi #&#x8FD4;&#x56DE;&#x51FA;&#x9519;&#xFF01;</p>
-<p>3.&#x5B89;&#x88C5;wkhtmltopdf&#xFF1A;</p>
-<p>sudo dpkg -i wkhtmltox-0.12.2.1_linux-trusty-amd64.deb</p>
-<pre><code>dpkg: dependency problems prevent configuration of wkhtmltox:
- wkhtmltox depends on fontconfig; however:
-  Package fontconfig is not installed.
- wkhtmltox depends on libjpeg-turbo8; however:
-  Package libjpeg-turbo8 is not installed.
- wkhtmltox depends on libpng12-0; however:
-  Package libpng12-0 is not installed.
- wkhtmltox depends on xfonts-75dpi; however:
-  Package xfonts-75dpi is not installed.
- wkhtmltox depends on xfonts-base; however:
-  Package xfonts-base is not installed.
-</code></pre><p>apt-get install fontconfig libjpeg-turbo8 libpng12-0 xfonts-75dpi xfonts-base</p>
-<p>4.&#x6D4B;&#x8BD5;&#xFF1A;</p>
-<p>wkhtmltopdf <a href="https://jx.tmall.com/" target="_blank">https://jx.tmall.com/</a> 3.pdf</p>
-<p>5.&#x4E2D;&#x6587;&#x4E71;&#x7801;</p>
-<p>&#x5728;&#x627E;&#x4E86;windows&#x91CC;&#x7684;&#x5B8B;&#x4F53;</p>
-<p>&#x4E0A;&#x4F20;&#x5230;&#x670D;&#x52A1;&#x5668;/usr/share/fonts/&#x91CC;</p>
-<p>/usr/share/fonts/TrueType/simsun.ttc</p>
+<h1 id="&#x4F7F;&#x7528;scp&#x547D;&#x4EE4;&#xFF0C;&#x8FDC;&#x7A0B;&#x4E0A;&#x4F20;&#x4E0B;&#x8F7D;&#x6587;&#x4EF6;&#x6587;&#x4EF6;&#x5939;"><a href="https://www.cnblogs.com/tectal/p/9478326.html" target="_blank">&#x4F7F;&#x7528;scp&#x547D;&#x4EE4;&#xFF0C;&#x8FDC;&#x7A0B;&#x4E0A;&#x4F20;&#x4E0B;&#x8F7D;&#x6587;&#x4EF6;/&#x6587;&#x4EF6;&#x5939;</a></h1>
+<p>&#x597D;&#x50CF;&#x662F;&#x5B89;&#x88C5;&#x4E86;git&#x624D;&#x80FD;&#x4F7F;&#x7528;scp&#x547D;&#x4EE4;</p>
+<h1 id="1&#x3001;&#x4ECE;&#x670D;&#x52A1;&#x5668;&#x4E0B;&#x8F7D;&#x6587;&#x4EF6;">1&#x3001;&#x4ECE;&#x670D;&#x52A1;&#x5668;&#x4E0B;&#x8F7D;&#x6587;&#x4EF6;</h1>
+<p>scp username@servername:/path/filename /local/path
+&#x4F8B;&#x5982;: scp ubuntu@117.50.20.56:/ygf/data/data.txt /desktop/ygf  &#x628A;117.50.20.56&#x4E0A;&#x7684;/ygf/data/data.txt &#x7684;&#x6587;&#x4EF6;&#x4E0B;&#x8F7D;&#x5230;/desktop/ygf&#x76EE;&#x5F55;&#x4E2D;</p>
+<h1 id="2&#x3001;&#x4E0A;&#x4F20;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x5230;&#x670D;&#x52A1;&#x5668;">2&#x3001;&#x4E0A;&#x4F20;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x5230;&#x670D;&#x52A1;&#x5668;</h1>
+<p>scp /local/path/local_filename username@servername:/path
+&#x4F8B;&#x5982;: scp /ygf/learning/deeplearning.doc ubuntu@117.50.20.56:/ygf/learning  &#x628A;&#x672C;&#x673A;/ygf/learning/&#x76EE;&#x5F55;&#x4E0B;&#x7684;deeplearning.doc&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x5230;117.50.20.56&#x8FD9;&#x53F0;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x7684;/ygf/learning&#x76EE;&#x5F55;&#x4E2D;</p>
+<h1 id="3&#x3001;&#x4ECE;&#x670D;&#x52A1;&#x5668;&#x4E0B;&#x8F7D;&#x6574;&#x4E2A;&#x76EE;&#x5F55;">3&#x3001;&#x4ECE;&#x670D;&#x52A1;&#x5668;&#x4E0B;&#x8F7D;&#x6574;&#x4E2A;&#x76EE;&#x5F55;</h1>
+<p>scp -r username@servername:/path /path
+&#x4F8B;&#x5982;: scp -r ubuntu@117.50.20.56:/home/ygf/data /local/local_dir  &#x201C;-r&#x201D;&#x547D;&#x4EE4;&#x662F;&#x6587;&#x4EF6;&#x5939;&#x76EE;&#x5F55;&#xFF0C;&#x628A;&#x5F53;&#x524D;/home/ygf/data&#x76EE;&#x5F55;&#x4E0B;&#x6240;&#x6709;&#x6587;&#x4EF6;&#x4E0B;&#x8F7D;&#x5230;&#x672C;&#x5730;/local/local_dir&#x76EE;&#x5F55;&#x4E2D;</p>
+<h1 id="4&#x3001;&#x4E0A;&#x4F20;&#x76EE;&#x5F55;&#x5230;&#x670D;&#x52A1;&#x5668;">4&#x3001;&#x4E0A;&#x4F20;&#x76EE;&#x5F55;&#x5230;&#x670D;&#x52A1;&#x5668;</h1>
+<p>scp -r /path username@servername:/path
+&#x4F8B;&#x5982;: scp -r /ygf/test ubuntu@117.50.20.56:/ygf/tx   &#x201C;-r&#x201D;&#x547D;&#x4EE4;&#x662F;&#x6587;&#x4EF6;&#x5939;&#x76EE;&#x5F55;&#xFF0C;&#x628A;&#x5F53;&#x524D;/ygf/test&#x76EE;&#x5F55;&#x4E0B;&#x6240;&#x6709;&#x6587;&#x4EF6;&#x4E0A;&#x4F20;&#x5230;&#x670D;&#x52A1;&#x5668;&#x7684;/ygf/tx/&#x76EE;&#x5F55;&#x4E2D;</p>
 
                                 
                                 </section>
@@ -488,12 +424,12 @@ wkhtmltopdf <a href="http://www.wpbeginner.com/plugins/7-best-wordpress-backup-p
 
             
                 
-                <a href="VPS.html" class="navigation navigation-prev " aria-label="Previous page: undefined">
+                <a href="pandoc.html" class="navigation navigation-prev " aria-label="Previous page: 格式转换">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../code/other.html" class="navigation navigation-next " aria-label="Next page: 其它应用">
+                <a href="screen.html" class="navigation navigation-next " aria-label="Next page: screen使用">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -504,7 +440,7 @@ wkhtmltopdf <a href="http://www.wpbeginner.com/plugins/7-best-wordpress-backup-p
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"网页pdf导出","level":"2.15","depth":1,"next":{"title":"其它应用","level":"3.1","depth":1,"path":"code/other.md","ref":"code/other.md","articles":[]},"previous":{"title":"undefined","level":"2.14","depth":1,"path":"src/VPS.md","ref":"src/VPS.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-comscore","auto-summary"],"pluginsConfig":{"auto-summary":{"parts":{"README.md":"简介","src/*.md":"Part I 学习笔记","code/*.md":"Part II 参考代码"}},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"src/wkhtmltopdf.md","mtime":"2020-02-20T16:45:54.716Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-22T22:04:07.283Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"使用scp命令，远程上传下载文件/文件夹","level":"2.10","depth":1,"next":{"title":"screen使用","level":"2.11","depth":1,"path":"src/screen.md","ref":"src/screen.md","articles":[]},"previous":{"title":"格式转换","level":"2.9","depth":1,"path":"src/pandoc.md","ref":"src/pandoc.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-comscore","auto-summary"],"pluginsConfig":{"auto-summary":{"parts":{"README.md":"简介","src/*.md":"Part I 学习笔记","code/*.md":"Part II 参考代码"}},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"src/scp.md","mtime":"2020-02-22T12:47:52.441Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-22T22:04:07.283Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
