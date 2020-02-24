@@ -13,7 +13,7 @@
 * [sharelatex部署笔记](src/docker-sharelatex.md)
 * [docker](src/docker.md)
 * [ubuntu 安装微软雅黑字体](src/font.md)
-* [undefined](src/git.md)
+* [Git](src/git.md)
 * [latex应用](src/latex.md)
 * [部署蚂蚁笔记](src/leanote.md)
 * [格式转换](src/pandoc.md)
@@ -21,9 +21,9 @@
 * [screen使用](src/screen.md)
 * [ssh登录](src/ssh.md)
 * [搬瓦工缺少的组件](src/vps-module.md)
-* [undefined](src/VPS.md)
+* [vps信息及应用](src/VPS.md)
 * [vsftpd搭建FTP下载站](src/vsftpd.md)
-* [undefined](src/Windows-system.md)
+* [windows学习笔记](src/Windows-system.md)
 * [网页pdf导出](src/wkhtmltopdf.md)
 
 ## Part II 参考代码
