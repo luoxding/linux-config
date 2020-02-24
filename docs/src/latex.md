@@ -40,3 +40,29 @@ $ source \etc\profile
 $ xelatex --version
 XeTeX 3.14159265-2.6-0.99992 (TeX Live 2015)
 ```
+
+### 常见宏包应用
+
+```
+进入容器
+root@Anthony:~# docker exec -it sharelatex bash
+安装宏包
+root@1de55c8e3eb8:/# tlmgr install markdown
+------
+sudo docker exec sharelatex tlmgr install <package name>
+sudo docker exec sharelatex texhash
+
+```
+
+
+
+- markdown
+
+```
+\documentclass{article}
+\usepackage{markdown}
+\begin{document}
+\markdownInput{example.md}
+\end{document}
+```
+

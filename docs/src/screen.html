@@ -206,9 +206,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.8" data-path="linux-setting.html">
+        <li class="chapter " data-level="2.8" data-path="linux-setting.md">
             
-                <a href="linux-setting.html">
+                <span>
             
                     
                     安装配置
@@ -377,8 +377,8 @@
                                 
                                 <h1 id="screen&#x4F7F;&#x7528;">screen&#x4F7F;&#x7528;</h1>
 <p><a href="https://www.cnblogs.com/mchina/archive/2013/01/30/2880680.html" target="_blank">linux screen &#x547D;&#x4EE4;&#x8BE6;&#x89E3;</a></p>
-<p><strong>&#x5728;&#x6BCF;&#x4E2A;screen session &#x4E0B;&#xFF0C;&#x6240;&#x6709;&#x547D;&#x4EE4;&#x90FD;&#x4EE5; ctrl+a(C-a) &#x5F00;&#x59CB;&#x3002;</strong>
-C-a ? -&gt; &#x663E;&#x793A;&#x6240;&#x6709;&#x952E;&#x7ED1;&#x5B9A;&#x4FE1;&#x606F;
+<p><strong>&#x5728;&#x6BCF;&#x4E2A;screen session &#x4E0B;&#xFF0C;&#x6240;&#x6709;&#x547D;&#x4EE4;&#x90FD;&#x4EE5; ctrl+a(C-a) &#x5F00;&#x59CB;&#x3002;</strong></p>
+<pre><code>C-a ? -&gt; &#x663E;&#x793A;&#x6240;&#x6709;&#x952E;&#x7ED1;&#x5B9A;&#x4FE1;&#x606F;
 C-a c -&gt; &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x8FD0;&#x884C;shell&#x7684;&#x7A97;&#x53E3;&#x5E76;&#x5207;&#x6362;&#x5230;&#x8BE5;&#x7A97;&#x53E3;
 C-a n -&gt; Next&#xFF0C;&#x5207;&#x6362;&#x5230;&#x4E0B;&#x4E00;&#x4E2A; window 
 C-a p -&gt; Previous&#xFF0C;&#x5207;&#x6362;&#x5230;&#x524D;&#x4E00;&#x4E2A; window 
@@ -402,8 +402,15 @@ C-a [ -&gt; &#x8FDB;&#x5165; copy mode&#xFF0C;&#x5728; copy mode &#x4E0B;&#x53EF
   b backward one word&#xFF0C;&#x4EE5;&#x5B57;&#x4E3A;&#x5355;&#x4F4D;&#x5F80;&#x540E;&#x79FB; 
   Space &#x7B2C;&#x4E00;&#x6B21;&#x6309;&#x4E3A;&#x6807;&#x8BB0;&#x533A;&#x8D77;&#x70B9;&#xFF0C;&#x7B2C;&#x4E8C;&#x6B21;&#x6309;&#x4E3A;&#x7EC8;&#x70B9; 
   Esc &#x7ED3;&#x675F; copy mode 
-C-a ] -&gt; Paste&#xFF0C;&#x628A;&#x521A;&#x521A;&#x5728; copy mode &#x9009;&#x5B9A;&#x7684;&#x5185;&#x5BB9;&#x8D34;&#x4E0A;</p>
-
+C-a ] -&gt; Paste&#xFF0C;&#x628A;&#x521A;&#x521A;&#x5728; copy mode &#x9009;&#x5B9A;&#x7684;&#x5185;&#x5BB9;&#x8D34;&#x4E0A;
+</code></pre><h2 id="&#x66F4;&#x591A;&#x529F;&#x80FD;">&#x66F4;&#x591A;&#x529F;&#x80FD;</h2>
+<pre><code>Ctrl + a&#xFF0C;d #&#x6682;&#x79BB;&#x5F53;&#x524D;&#x4F1A;&#x8BDD;
+Ctrl + a&#xFF0C;c #&#x5728;&#x5F53;&#x524D;screen&#x4F1A;&#x8BDD;&#x4E2D;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x5B50;&#x4F1A;&#x8BDD;
+Ctrl + a&#xFF0C;w #&#x5B50;&#x4F1A;&#x8BDD;&#x5217;&#x8868;
+Ctrl + a&#xFF0C;p #&#x4E0A;&#x4E00;&#x4E2A;&#x5B50;&#x4F1A;&#x8BDD;
+Ctrl + a&#xFF0C;n #&#x4E0B;&#x4E00;&#x4E2A;&#x5B50;&#x4F1A;&#x8BDD;
+Ctrl + a&#xFF0C;0-9 #&#x5728;&#x7B2C;0&#x7A97;&#x53E3;&#x81F3;&#x7B2C;9&#x5B50;&#x4F1A;&#x8BDD;&#x95F4;&#x5207;&#x6362;
+</code></pre>
                                 
                                 </section>
                             
@@ -446,7 +453,7 @@ C-a ] -&gt; Paste&#xFF0C;&#x628A;&#x521A;&#x521A;&#x5728; copy mode &#x9009;&#x5
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"screen使用","level":"2.11","depth":1,"next":{"title":"ssh登录","level":"2.12","depth":1,"path":"src/ssh.md","ref":"src/ssh.md","articles":[]},"previous":{"title":"使用scp命令，远程上传下载文件/文件夹","level":"2.10","depth":1,"path":"src/scp.md","ref":"src/scp.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-comscore","auto-summary"],"pluginsConfig":{"auto-summary":{"parts":{"README.md":"简介","src/*.md":"Part I 学习笔记","code/*.md":"Part II 参考代码"}},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"src/screen.md","mtime":"2020-02-20T16:45:54.706Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-22T22:04:07.283Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"screen使用","level":"2.11","depth":1,"next":{"title":"ssh登录","level":"2.12","depth":1,"path":"src/ssh.md","ref":"src/ssh.md","articles":[]},"previous":{"title":"使用scp命令，远程上传下载文件/文件夹","level":"2.10","depth":1,"path":"src/scp.md","ref":"src/scp.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-comscore","auto-summary"],"pluginsConfig":{"auto-summary":{"parts":{"README.md":"简介","src/*.md":"Part I 学习笔记","code/*.md":"Part II 参考代码"}},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"src/screen.md","mtime":"2020-02-24T06:29:13.063Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-24T16:33:05.539Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

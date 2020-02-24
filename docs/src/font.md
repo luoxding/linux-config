@@ -21,3 +21,23 @@ apt install xfonts-utils
 
 原文链接：https://blog.csdn.net/u014590211/article/details/81875110
 
+```
+root@1de55c8e3eb8:/# fc-list :lang=zh-cn
+/usr/share/fonts/chinese-fonts/思源黑体/SourceHanSansSC-ExtraLight.otf: Source Han Sans SC,思源黑体,Source Han Sans SC ExtraLight,思源黑体 ExtraLight:style=ExtraLight,Regular
+/usr/share/fonts/chinese-fonts/思源宋体/SourceHanSerifCN-SemiBold.otf: Source Han Serif CN,思源宋体 CN,Source Han Serif CN SemiBold,思源宋体 CN SemiBold:style=SemiBold,Regular
+/usr/share/fonts/chinese-fonts/思源黑体/SourceHanSansSC-Bold.otf: Source Han Sans SC,思源黑体:style=Bold
+/usr/share/fonts/chinese-fonts/思源宋体/SourceHanSerifCN-ExtraLight.otf: Source Han Serif CN,思源宋体 CN,Source Han Serif CN ExtraLight,思源宋体 CN ExtraLight:style=ExtraLight,Regular
+/usr/share/fonts/chinese-fonts/思源黑体/SourceHanSansSC-Regular.otf: Source Han Sans SC,思源黑体:style=Regular
+/usr/share/fonts/chinese-fonts/思源宋体/SourceHanSerifCN-Medium.otf: Source Han Serif CN,思源宋体 CN,Source Han Serif CN Medium,思源宋体 CN Medium:style=Medium,Regular
+/usr/share/fonts/chinese-fonts/思源黑体/SourceHanSansSC-Normal.otf: Source Han Sans SC,思源黑体,Source Han Sans SC Normal,思源黑体 Normal:style=Normal,Regular
+/usr/share/fonts/chinese-fonts/思源宋体/SourceHanSerifCN-Regular.otf: Source Han Serif CN,思源宋体 CN:style=Regular
+/usr/share/fonts/chinese-fonts/思源宋体/SourceHanSerifCN-Heavy.otf: Source Han Serif CN,思源宋体 CN,Source Han Serif CN Heavy,思源宋体 CN Heavy:style=Heavy,Regular
+/usr/share/fonts/chinese-fonts/思源宋体/SourceHanSerifCN-Light.otf: Source Han Serif CN,思源宋体 CN,Source Han Serif CN Light,思源宋体 CN Light:style=Light,Regular
+/usr/share/fonts/chinese-fonts/思源黑体/SourceHanSansSC-Medium.otf: Source Han Sans SC,思源黑体,Source Han Sans SC Medium,思源黑体 Medium:style=Medium,Regular
+/usr/share/fonts/chinese-fonts/思源宋体/SourceHanSerifCN-Bold.otf: Source Han Serif CN,思源宋体 CN:style=Bold
+/usr/share/fonts/chinese-fonts/思源黑体/SourceHanSansSC-Light.otf: Source Han Sans SC,思源黑体,Source Han Sans SC Light,思源黑体 Light:style=Light,Regular
+/usr/share/fonts/chinese-fonts/思源黑体/SourceHanSansSC-Heavy.otf: Source Han Sans SC,思源黑体,Source Han Sans SC Heavy,思源黑体 Heavy:style=Heavy,Regular
+root@1de55c8e3eb8:/#
+
+```
+

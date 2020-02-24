@@ -79,6 +79,14 @@ root@sharelatex:~/sharelatex# mkdir sharelatex_data mongo_data redis_data
 \3. 如有必要，修改docker-compose.yml文件（如：替换`~`为相应的目录，修改管理员的邮箱，等等）
 
 ```
+修改
+PATH: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/texlive/2019/bin/x86_64-linux
+
+```
+
+
+
+```
 本地上传到远程
 scp docker-compose.yml root@204.152.210.223:/root/sharelatex
 screen -S do

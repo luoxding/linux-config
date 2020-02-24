@@ -3,6 +3,7 @@
 [linux screen 命令详解](https://www.cnblogs.com/mchina/archive/2013/01/30/2880680.html)
 
 **在每个screen session 下，所有命令都以 ctrl+a(C-a) 开始。**
+```
 C-a ? -> 显示所有键绑定信息
 C-a c -> 创建一个新的运行shell的窗口并切换到该窗口
 C-a n -> Next，切换到下一个 window 
@@ -28,3 +29,15 @@ C-a [ -> 进入 copy mode，在 copy mode 下可以回滚、搜索、复制就�
   Space 第一次按为标记区起点，第二次按为终点 
   Esc 结束 copy mode 
 C-a ] -> Paste，把刚刚在 copy mode 选定的内容贴上
+```
+## 更多功能
+
+```
+Ctrl + a，d #暂离当前会话
+Ctrl + a，c #在当前screen会话中创建一个子会话
+Ctrl + a，w #子会话列表
+Ctrl + a，p #上一个子会话
+Ctrl + a，n #下一个子会话
+Ctrl + a，0-9 #在第0窗口至第9子会话间切换
+```
+

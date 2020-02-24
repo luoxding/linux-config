@@ -107,9 +107,12 @@ $ cp -a 2017 2018
 $ wget http://mirror.ctan.org/systems/texlive/tlnet/update-tlmgr-latest.sh
 $ sh update-tlmgr-latest.sh -- --upgrade
 
+镜像下载：
+wget http://mirrors.ibiblio.org/CTAN/systems/texlive/Images/texlive2019.iso
 # 更换texlive的下载源，例如国内的清华源
 $ tlmgr option repository https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/tlnet/
 # 更换texlive的下载源，例如美国ibiblio.org（北卡罗莱纳州）
+wget http://mirrors.ibiblio.org/CTAN/systems/texlive/tlnet/update-tlmgr-latest.sh
 $ tlmgr option repository http://mirrors.ibiblio.org/CTAN/systems/texlive/tlnet/
 # 日本
 wget http://ftp.jaist.ac.jp/pub/CTAN/systems/texlive/tlnet/update-tlmgr-latest.sh

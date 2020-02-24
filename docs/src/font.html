@@ -206,9 +206,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.8" data-path="linux-setting.html">
+        <li class="chapter " data-level="2.8" data-path="linux-setting.md">
             
-                <a href="linux-setting.html">
+                <span>
             
                     
                     安装配置
@@ -390,7 +390,23 @@ sudo fc-cache -fv</p>
 <p>&#x5982;&#x679C;&#x51FA;&#x73B0; mkfontscale command not found , &#x6267;&#x884C;
 apt install xfonts-utils</p>
 <p>&#x539F;&#x6587;&#x94FE;&#x63A5;&#xFF1A;<a href="https://blog.csdn.net/u014590211/article/details/81875110" target="_blank">https://blog.csdn.net/u014590211/article/details/81875110</a></p>
-
+<pre><code>root@1de55c8e3eb8:/# fc-list :lang=zh-cn
+/usr/share/fonts/chinese-fonts/&#x601D;&#x6E90;&#x9ED1;&#x4F53;/SourceHanSansSC-ExtraLight.otf: Source Han Sans SC,&#x601D;&#x6E90;&#x9ED1;&#x4F53;,Source Han Sans SC ExtraLight,&#x601D;&#x6E90;&#x9ED1;&#x4F53; ExtraLight:style=ExtraLight,Regular
+/usr/share/fonts/chinese-fonts/&#x601D;&#x6E90;&#x5B8B;&#x4F53;/SourceHanSerifCN-SemiBold.otf: Source Han Serif CN,&#x601D;&#x6E90;&#x5B8B;&#x4F53; CN,Source Han Serif CN SemiBold,&#x601D;&#x6E90;&#x5B8B;&#x4F53; CN SemiBold:style=SemiBold,Regular
+/usr/share/fonts/chinese-fonts/&#x601D;&#x6E90;&#x9ED1;&#x4F53;/SourceHanSansSC-Bold.otf: Source Han Sans SC,&#x601D;&#x6E90;&#x9ED1;&#x4F53;:style=Bold
+/usr/share/fonts/chinese-fonts/&#x601D;&#x6E90;&#x5B8B;&#x4F53;/SourceHanSerifCN-ExtraLight.otf: Source Han Serif CN,&#x601D;&#x6E90;&#x5B8B;&#x4F53; CN,Source Han Serif CN ExtraLight,&#x601D;&#x6E90;&#x5B8B;&#x4F53; CN ExtraLight:style=ExtraLight,Regular
+/usr/share/fonts/chinese-fonts/&#x601D;&#x6E90;&#x9ED1;&#x4F53;/SourceHanSansSC-Regular.otf: Source Han Sans SC,&#x601D;&#x6E90;&#x9ED1;&#x4F53;:style=Regular
+/usr/share/fonts/chinese-fonts/&#x601D;&#x6E90;&#x5B8B;&#x4F53;/SourceHanSerifCN-Medium.otf: Source Han Serif CN,&#x601D;&#x6E90;&#x5B8B;&#x4F53; CN,Source Han Serif CN Medium,&#x601D;&#x6E90;&#x5B8B;&#x4F53; CN Medium:style=Medium,Regular
+/usr/share/fonts/chinese-fonts/&#x601D;&#x6E90;&#x9ED1;&#x4F53;/SourceHanSansSC-Normal.otf: Source Han Sans SC,&#x601D;&#x6E90;&#x9ED1;&#x4F53;,Source Han Sans SC Normal,&#x601D;&#x6E90;&#x9ED1;&#x4F53; Normal:style=Normal,Regular
+/usr/share/fonts/chinese-fonts/&#x601D;&#x6E90;&#x5B8B;&#x4F53;/SourceHanSerifCN-Regular.otf: Source Han Serif CN,&#x601D;&#x6E90;&#x5B8B;&#x4F53; CN:style=Regular
+/usr/share/fonts/chinese-fonts/&#x601D;&#x6E90;&#x5B8B;&#x4F53;/SourceHanSerifCN-Heavy.otf: Source Han Serif CN,&#x601D;&#x6E90;&#x5B8B;&#x4F53; CN,Source Han Serif CN Heavy,&#x601D;&#x6E90;&#x5B8B;&#x4F53; CN Heavy:style=Heavy,Regular
+/usr/share/fonts/chinese-fonts/&#x601D;&#x6E90;&#x5B8B;&#x4F53;/SourceHanSerifCN-Light.otf: Source Han Serif CN,&#x601D;&#x6E90;&#x5B8B;&#x4F53; CN,Source Han Serif CN Light,&#x601D;&#x6E90;&#x5B8B;&#x4F53; CN Light:style=Light,Regular
+/usr/share/fonts/chinese-fonts/&#x601D;&#x6E90;&#x9ED1;&#x4F53;/SourceHanSansSC-Medium.otf: Source Han Sans SC,&#x601D;&#x6E90;&#x9ED1;&#x4F53;,Source Han Sans SC Medium,&#x601D;&#x6E90;&#x9ED1;&#x4F53; Medium:style=Medium,Regular
+/usr/share/fonts/chinese-fonts/&#x601D;&#x6E90;&#x5B8B;&#x4F53;/SourceHanSerifCN-Bold.otf: Source Han Serif CN,&#x601D;&#x6E90;&#x5B8B;&#x4F53; CN:style=Bold
+/usr/share/fonts/chinese-fonts/&#x601D;&#x6E90;&#x9ED1;&#x4F53;/SourceHanSansSC-Light.otf: Source Han Sans SC,&#x601D;&#x6E90;&#x9ED1;&#x4F53;,Source Han Sans SC Light,&#x601D;&#x6E90;&#x9ED1;&#x4F53; Light:style=Light,Regular
+/usr/share/fonts/chinese-fonts/&#x601D;&#x6E90;&#x9ED1;&#x4F53;/SourceHanSansSC-Heavy.otf: Source Han Sans SC,&#x601D;&#x6E90;&#x9ED1;&#x4F53;,Source Han Sans SC Heavy,&#x601D;&#x6E90;&#x9ED1;&#x4F53; Heavy:style=Heavy,Regular
+root@1de55c8e3eb8:/#
+</code></pre>
                                 
                                 </section>
                             
@@ -433,7 +449,7 @@ apt install xfonts-utils</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"ubuntu 安装微软雅黑字体","level":"2.4","depth":1,"next":{"title":"undefined","level":"2.5","depth":1,"path":"src/git.md","ref":"src/git.md","articles":[]},"previous":{"title":"docker","level":"2.3","depth":1,"path":"src/docker.md","ref":"src/docker.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-comscore","auto-summary"],"pluginsConfig":{"auto-summary":{"parts":{"README.md":"简介","src/*.md":"Part I 学习笔记","code/*.md":"Part II 参考代码"}},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"src/font.md","mtime":"2020-02-22T13:10:05.873Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-22T22:04:07.283Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"ubuntu 安装微软雅黑字体","level":"2.4","depth":1,"next":{"title":"undefined","level":"2.5","depth":1,"path":"src/git.md","ref":"src/git.md","articles":[]},"previous":{"title":"docker","level":"2.3","depth":1,"path":"src/docker.md","ref":"src/docker.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-comscore","auto-summary"],"pluginsConfig":{"auto-summary":{"parts":{"README.md":"简介","src/*.md":"Part I 学习笔记","code/*.md":"Part II 参考代码"}},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"src/font.md","mtime":"2020-02-24T05:49:47.928Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-24T16:33:05.539Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

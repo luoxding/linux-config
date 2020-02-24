@@ -206,9 +206,9 @@
             
         </li>
     
-        <li class="chapter " data-level="2.8" data-path="linux-setting.html">
+        <li class="chapter " data-level="2.8" data-path="linux-setting.md">
             
-                <a href="linux-setting.html">
+                <span>
             
                     
                     安装配置
@@ -411,7 +411,23 @@ $ xelatex --version
 XeTeX 3.14159265-2.6-0.99992 (TeX Live 2015)
 </code></pre></li>
 </ul>
-
+<h3 id="&#x5E38;&#x89C1;&#x5B8F;&#x5305;&#x5E94;&#x7528;">&#x5E38;&#x89C1;&#x5B8F;&#x5305;&#x5E94;&#x7528;</h3>
+<pre><code>&#x8FDB;&#x5165;&#x5BB9;&#x5668;
+root@Anthony:~# docker exec -it sharelatex bash
+&#x5B89;&#x88C5;&#x5B8F;&#x5305;
+root@1de55c8e3eb8:/# tlmgr install markdown
+------
+sudo docker exec sharelatex tlmgr install &lt;package name&gt;
+sudo docker exec sharelatex texhash
+</code></pre><ul>
+<li>markdown</li>
+</ul>
+<pre><code>\documentclass{article}
+\usepackage{markdown}
+\begin{document}
+\markdownInput{example.md}
+\end{document}
+</code></pre>
                                 
                                 </section>
                             
@@ -454,7 +470,7 @@ XeTeX 3.14159265-2.6-0.99992 (TeX Live 2015)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"latex应用","level":"2.6","depth":1,"next":{"title":"部署蚂蚁笔记","level":"2.7","depth":1,"path":"src/leanote.md","ref":"src/leanote.md","articles":[]},"previous":{"title":"undefined","level":"2.5","depth":1,"path":"src/git.md","ref":"src/git.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-comscore","auto-summary"],"pluginsConfig":{"auto-summary":{"parts":{"README.md":"简介","src/*.md":"Part I 学习笔记","code/*.md":"Part II 参考代码"}},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"src/latex.md","mtime":"2020-02-20T16:45:54.702Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-22T22:04:07.283Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"latex应用","level":"2.6","depth":1,"next":{"title":"部署蚂蚁笔记","level":"2.7","depth":1,"path":"src/leanote.md","ref":"src/leanote.md","articles":[]},"previous":{"title":"undefined","level":"2.5","depth":1,"path":"src/git.md","ref":"src/git.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-comscore","auto-summary"],"pluginsConfig":{"auto-summary":{"parts":{"README.md":"简介","src/*.md":"Part I 学习笔记","code/*.md":"Part II 参考代码"}},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"src/latex.md","mtime":"2020-02-24T08:11:17.764Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-02-24T16:33:05.539Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

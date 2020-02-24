@@ -53,6 +53,8 @@ You are being href= https://github.com/overleaf/overleaf/raw/master/docker-compo
 
 文件：https://raw.githubusercontent.com/overleaf/overleaf/master/docker-compose.yml **新建文件夹时依照该文件路径创建**
 
+## 安装docker-compose
+
 ```
 sudo curl -L "https://github.com/docker/compose/releases/download/1.25.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo mv /usr/local/bin/docker-compose /usr/bin/docker-compose
@@ -79,3 +81,6 @@ docker-compose up
 ```
 docker-compose up
 ```
+
+[Docker images导出和导入](https://www.jianshu.com/p/8408e06b7273)
+
