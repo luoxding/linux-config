@@ -75,7 +75,7 @@ root@sharelatex:~/sharelatex# mkdir sharelatex_data mongo_data redis_data
 
 ```
 
-\2. 下载[docker-compose.yml](https://link.zhihu.com/?target=https%3A//raw.githubusercontent.com/sharelatex/sharelatex/master/docker-compose.yml)，并存在`~/sharelatex/`目录下。
+\2. 下载[docker-compose.yml](https://raw.githubusercontent.com/sharelatex/sharelatex/master/docker-compose.yml)，并存在`~/sharelatex/`目录下。
 \3. 如有必要，修改docker-compose.yml文件（如：替换`~`为相应的目录，修改管理员的邮箱，等等）
 
 ```

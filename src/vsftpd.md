@@ -188,7 +188,10 @@ chown 777 /var/ftp/upload
 　　[root@test root]# chown ftp /var/ftp/upload （2.文件夹持有者属性）
 　
 　　/upload 的權限是 777 （3.设置可以读写属性，可以点击右键中的属性按钮操作）
-　
+　sudo chmod 777 ××× （每个人都有读和写以及执行的权限）
+
+chmod 777 /var/ftp/upload
+
 　　3.重新启动命令：
 　
 　　[root@test root]# service vsftpd restart
