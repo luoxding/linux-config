@@ -212,6 +212,13 @@ docker save -o ~/hackmd-backup.tar hackmd-backup
 
 接下来我们使用该命令进入一个已经在运行的容器
 
+```
+#linux
+$ docker exec -it fab1fc83fb0f bash
+# windows
+$ winpty docker exec -it fab1fc83fb0f bash
+```
+
 
 
 1. $ sudo docker ps 

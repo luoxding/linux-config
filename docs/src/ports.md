@@ -6,7 +6,7 @@
 | ---------- | ----------------------- | ------------ |
 | served     | 80                      |              |
 | vsftpd     | 21                      |              |
-| nextcloud  | 8080                    |              |
+| nextcloud  | 8000                    |              |
 | leanote    | 9000                    |              |
 | wiznote    | /                       | 不用安装了   |
 | sharelatex | 80/5000                 |              |

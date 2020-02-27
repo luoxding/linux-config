@@ -19,6 +19,7 @@
 * [Git](src/git.md)
 * [latex应用](src/latex.md)
 * [部署蚂蚁笔记](src/leanote.md)
+* [localhost本地访问](src/localhost.md)
 * [[利用Nextcloud搭建私有同步云盘](https://zhuanlan.zhihu.com/p/62987726)](src/Nextcloud.md)
 * [nodejs](src/nodejs.md)
 * [格式转换](src/pandoc.md)
