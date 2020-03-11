@@ -197,3 +197,7 @@ root@8656f81c63b8:~#
 
 ```
 
+```
+docker-compose run --rm -v /dev/null:/etc/service/clsi-sharelatex/down sharelatex -- sh -x /etc/service/clsi-sharelatex/run
+```
+

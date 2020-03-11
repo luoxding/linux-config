@@ -7,9 +7,12 @@
 * [了解Linux系统](src/001-Linux-system.md)
 * [安装配置](src/002-linux-setting.md)
 * [各种工具](src/003-tools.md)
+* [lINUX](src/a_001_outline.md)
 * [VPS应用笔记](src/a1_VPS.md)
+* [软件应用部署笔记](src/a1_VPS应用部署.md)
 * [docker容器应用](src/a2_docker.md)
 * [便笺](src/abnote.md)
+* [搭建博客](src/blog.md)
 * [运营维护](src/codimd.md)
 * [安装docker](src/docker-apply.md)
 * [[ShareLaTeX安装、配置与部署](https://zhuanlan.zhihu.com/p/54088512)](src/docker-sharelatex-v2.md)
@@ -28,10 +31,12 @@
 * [screen使用](src/screen.md)
 * [ssh登录](src/ssh.md)
 * [Trilium Notes](src/Trilium_Notes.md)
+* [一键脚本](src/v2ray.md)
 * [搬瓦工缺少的组件](src/vps-module.md)
 * [vsftpd搭建FTP下载站](src/vsftpd.md)
 * [windows学习笔记](src/Windows-system.md)
 * [网页pdf导出](src/wkhtmltopdf.md)
+* [[Linux下*.tar.gz文件解压缩命令](https://www.cnblogs.com/xiehy/archive/2010/09/13/1824776.html)](src/文件解压缩.md)
 
 ## Part II 参考代码
 

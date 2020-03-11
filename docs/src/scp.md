@@ -16,6 +16,13 @@ scp username@servername:/path/filename /local/path
 
  
 
+```
+# 端口大写P
+scp -P 26654 root@138.128.213.200:/root/baidu.pdf ./
+```
+
+
+
 # 2、上传本地文件到服务器
 
 scp /local/path/local_filename username@servername:/path

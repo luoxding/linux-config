@@ -36,6 +36,8 @@ $ sudo curl -sS https://get.docker.com/ | sh
 apt  install docker.io
 docker --version
 Docker version 19.03.2, build 6a30dfca03
+yum install -y docker-ce
+
 ```
 
 安装脚本
@@ -62,6 +64,24 @@ sudo service docker status
 ```
 
 [Docker之Compose服务编排](https://www.cnblogs.com/52fhy/p/5991344.html) 各种安装方法
+
+## centos安装
+
+```
+yum remove -y docker \
+                  docker-client \
+                  docker-client-latest \
+                  docker-common \
+                  docker-latest \
+                  docker-latest-logrotate \
+                  docker-logrotate \
+                  docker-selinux \
+                  docker-engine-selinux \
+                  docker-engine
+yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+```
+
+
 
 ## [docker 设置国内镜像源](https://blog.csdn.net/whatday/article/details/86770609)
 
@@ -133,6 +153,21 @@ docker-compose up
 
 [Docker images导出和导入](https://www.jianshu.com/p/8408e06b7273)
 
+## [Docker删除容器与镜像](https://blog.csdn.net/qq_32447301/article/details/79387649)
+
+```
+docker stop $(docker ps -a -q)
+docker images
+docker rmi <image id>
+docker ps
+docker stop 容器id
+docker rm 容器id
+docker images
+docker rmi 镜像id
+```
+
+
+
 ## [docker镜像服务器间复制](https://blog.csdn.net/qq_36358942/article/details/79473472)
 
 https://blog.csdn.net/qq_36358942/article/details/79473472
@@ -168,6 +203,16 @@ docker load < 文件名
 docker load < java8.tar
 ```
   导入后可以使用docker images命令查看:
+
+## 镜像重命名
+
+使用docker images时，可能会出现REPOSITORY和TAG均为none的镜像
+
+这时，我们可以重命名镜像
+
+```
+# docker tag IMAGEID(镜像id) REPOSITORY:TAG（仓库：标签）
+```
 
 ### [docker容器如何迁移](https://www.west.cn/docs/61060.html)
 
@@ -295,3 +340,72 @@ docker启动命令,docker重启命令,docker关闭命令
 ————————————————
 版权声明：本文为CSDN博主「EasternUnbeaten」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
 原文链接：https://blog.csdn.net/EasternUnbeaten/article/details/80463837
+
+### [修改已经创建的docker容器的端口映射](https://www.cnblogs.com/zlgxzswjy/p/10560058.html)
+
+```
+docker stop <容器id>
+vim /var/lib/docker/containers/[容器hash]/hostconfig.json
+systemctl restart docker
+docker start <容器id>
+
+fa35be3e63f3
+vim /var/lib/docker/containers/[容器hash]/hostconfig.json
+root@Anthony:/var/lib/docker/containers/fa35be3e63f367e19f230073ea6be76b604faf48ae2c31ebea51195de3963304# vim config.v2.json
+
+```
+
+### 为知笔记
+
+```
+#官方脚本
+docker run --name wiz --restart=always -it -d -v  ~/wizdata:/wiz/storage -v  /etc/localtime:/etc/localtime -p 80:80 -p 9269:9269/udp  wiznote/wizserver
+
+docker run --name wiz --restart=always -it -d -v  ~/wizdata:/wiz/storage -v  /etc/localtime:/etc/localtime -p 2000:80 -p 9269:9269/udp -e SEARCH=true wiznote/wizserver
+1G内存测试
+结果：成功
+docker run --name wiz --restart=always -it -d -v  ~/note/wizdata:/wiz/storage -v  /etc/localtime:/etc/localtime -p 2000:80 -p 9269:9269/udp -e SEARCH=false wiznote/wizserver
+结果：失败/错误：Internal Server Error
+docker run --name wiz --restart=always -it -d -v  ~/note/wizdata:/wiz/storage -v  /etc/localtime:/etc/localtime -p 2000:80 -p 9269:9269/udp wiznote/wizserver
+
+```
+
+#### 更新服务命令行：
+
+```
+docker stop wiz
+docker rm wiz
+docker pull wiznote/wizserver:latest
+docker run --name wiz --restart=always -it -d -v  ~/wizdata:/wiz/storage -v  /etc/localtime:/etc/localtime -p 80:80 -p 9269:9269/udp  wiznote/wizserver
+```
+
+其中最后一行，请自行修改为自己需要的命令行
+
+```
+如何安装
+首先确保你安装了 Docker，然后先创建一个用于保存数据的文件夹，然后运行下面的命令：
+
+docker run --name wiz -it -d -v  ~/wizdata:/wiz/storage -p 80:80 -e SEARCH=true wiznote/wizserver
+注意，上面的 ~/wizdata 即保存数据的文件夹，-p 80:80 前面的 80 是服务端口，如果你的宽带不提供 80 口请更换为其他端口，后面的 80 不要修改。
+
+内存不够的同学记得把 SEARCH=true 改成 false
+
+然后就好了，请等待至少 5 分钟，再从浏览器访问：
+
+http://127.0.0.1:80
+记得把 80 修改为你自己的，就能看到下面的界面啦：
+```
+
+
+
+```
+docker images
+Images
+wiznote/wizserver       latest              16c3076c5ecf        2 weeks ago         1.64GB
+docker ps
+Container
+fa35be3e63f3        wiznote/wizserver       "bash /wiz/app/entry…"   3 days ago          Up 10 hours             0.0.0.0:9269->9269/udp, 0.0.0.0:1000->80/tcp   wiz
+
+docker run --name wiz --restart=always -it -d -v  ~/wizdata:/wiz/storage -v  /etc/localtime:/etc/localtime -p 1000:80 -p 9269:9269/udp  wiznote/wizserver
+```
+

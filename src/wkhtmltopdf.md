@@ -13,6 +13,16 @@ cd wkhtmltox/bin
 chmod +x wkhtmltopdf
 #移动过去
 mv wkhtmltopdf /usr/local/bin
+apt install libXrender* libfontconfig* libXext* -y
+========================================
+apt-get install libXrender*
+apt-get install libfontconfig*
+apt-get install libXext*
+
+apt install libXrender* libfontconfig* libXext* -y
+
+apt-get install 
+apt-get install libXext*
 ```
 - 测试是否安装成功
 

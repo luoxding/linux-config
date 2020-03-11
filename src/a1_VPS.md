@@ -24,7 +24,9 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub root@204.152.210.223
 
 ## 安装常用应用
 ```
-apt update && apt install curl git screen screenfetch vim unzip vsftpd -y
+apt update && apt install curl git screen screenfetch vim unzip vsftpd fontconfig xfonts-utils -y
+例外，慎重
+nginx
 ```
 
 ## 安装docker

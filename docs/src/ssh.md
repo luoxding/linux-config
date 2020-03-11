@@ -7,6 +7,7 @@
 ssh-keygen -t  rsa
 ssh-copy-id -i ~/.ssh/id_rsa.pub root@104.244.91.31 26654
 #然后输入密码
+MLGFgSynXN8B
 ```
 
 scp -p ~/.ssh/id_rsa.pub root@<server ip>:/root/.ssh/authorized_keys
@@ -30,3 +31,9 @@ Host bwh
 ssh bwh
 ```
 
+TCP\6688&6689&6690
+
+服务器名称：阿里云
+外网IP：47.115.95.42
+内网IP：172.18.64.116
+系统类型：Ubuntu 18.04.4 LTS

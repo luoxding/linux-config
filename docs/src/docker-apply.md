@@ -104,3 +104,26 @@ sudo docker-compose up
 3. 进入sharelatex：`sudo docker exec -it sharelatex bash`
 4. 进入数据库：`sudo docker exec -it mongo bash`
 5. 列出sharelatex的用户：`mongoexport -d sharelatex -c users -f email` (需要先进入数据库)
+
+# 部署code Server Vscode server版本
+
+[http://leesx.cn/2019/06/26/%E9%83%A8%E7%BD%B2code-server-vscode-server%E7%89%88%E6%9C%AC/](http://leesx.cn/2019/06/26/部署code-server-vscode-server版本/)
+
+
+
+```
+docker run -it -d -p 8443:8443  codercom/code-server --allow-http --no-auth
+```
+
+
+
+```
+docker run -dit --restart=always \
+--name vscode -h vscode \
+-u root  -p 8086:8080 \
+-v /data/vscode:/root \
+-e PASSWORD=mycode \
+-v /etc/localtime:/etc/localtime:ro \
+codercom/code-server:v2  --auth password
+```
+

@@ -3,8 +3,55 @@
 
 [TOC]
 
+[leanote在Windows下的搭建](https://blog.csdn.net/janceewa/article/details/54379729)
+
+[Windows](https://github.com/leanote/leanote/wiki/Leanote-二进制版详细安装教程----Windows)安装教程
+
+```
+C:\> mongod --dbpath C:\dbanote 
+C:\> mongo
+导入初始数据
+mongorestore -h 127.0.0.1-d leanote --dir c:\leanote\mongodb_backup\leanote_install_data
+mongorestore -h localhost -d leanote --dir d:\Soft\leanote\mongodb_backup\leanote_install_data
+
+mongorestore -h 127.0.0.1-d leanote --dir d:\Soft\leanote\mongodb_backup\leanote_install_data
+
+```
+
+```
+ whereis wkhtmltopdf
+wkhtmltopdf: /usr/bin/wkhtmltopdf /mnt/c/Program Files/wkhtmltopdf/bin/wkhtmltopdf.exe /usr/share/man/man1/wkhtmltopdf.1.gz
+```
+
+**注意：导入成功的数据已经包含2个用户**
+
+```
+user1 username: admin, password: abc123 (管理员, 只有该用户可以管理后台)  
+user2 username: demo@leanote.com, password: demo@leanote.com (仅供体验使用)
+leanote的配置存储在文件 conf/app.conf 中。
+具体路径：D:\Soft\leanote\bin\src\github.com\leanote\leanote\conf
+```
+
+**重启之后：**
+
+```
+$ C:\>
+mongod --dbpath C:\dbanote
+$ D:\Soft\leanote\bin	# powershell管理员身份运行
+./run.bat
+```
+
+客户端登录
+
+```
+地址错误 http://localhost:9000/
+地址正确 http://localhost:9000
+```
+
+
 
 ## 蚂蚁笔记（源码安装）
+
 - 当前地址：http://144.202.15.235:9000
 - [用Leanote搭建自己的云笔记服务](https://www.jianshu.com/p/bc55909688a0) (包含导出PDF配置 wkhtmltopdf)
 
@@ -343,3 +390,94 @@ nohup bash xxx/leanote/bin/run.sh > logs/leanote.log &
 链接：https://www.jianshu.com/p/30ecac1b5fa2
 来源：简书
 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+## docker部署
+
+## Docker 搭建蚂蚁笔记 leanote
+
+[leanote-docker 蚂蚁笔记一键安装版](https://github.com/justinchou/leanote-docker)
+
+```
+wget https://github.com/justinchou/docker-leanote/archive/master.zip
+git clone https://github.com/justinchou/docker-leanote.git
+
+bash ./init.sh
+```
+
+
+
+# leanote的docker部署
+
+https://www.jianshu.com/p/d0a8f3b659fe
+
+获取镜像：`docker pull foolishflyfox/leanote`，该镜像在`jim3ma/leanote`构建而成，主要更新了wkhtmltopdf软件，解决文章不能导出的问题。 
+
+https://github.com/leanote/leanote/archive/master.zip
+
+```
+mkdir -p ~/leanote/leanote-data/{files,mongodb_backup,public/upload}; cd ~/leanote
+wget https://github.com/leanote/leanote/archive/master.zip
+unzip master.zip
+root@eisvogel:~/leanote/leanote-master/mongodb_backup# cp -r ./* ~/leanote/leanote-data/mongodb_backup
+root@eisvogel:~/leanote/leanote-master/public# cp -r ./* ~/leanote/leanote-data/public
+root@eisvogel:~/leanote/leanote-master# cp -r conf ~/leanote
+root@eisvogel:~/leanote# mv leanote-master leanote
+
+RUN rm -rf /leanote/public
+ 12 RUN rm -rf /leanote/mongodb_backup
+ 13 RUN ln -s /leanote-data/public /leanote/public
+ 14 RUN ln -s /leanote-data/mongodb_backup /leanote/mongodb_backup
+ 
+ 
+```
+
+```
+docker run -p localhost-port:image-expose-port -d your-docker-image
+```
+
+- `-p`绑定端口，做端口映射（把镜像image-expose-port端口映射到本地localhost-port端口）
+- `-d`让镜像可以在后台运行；允许程序直接返回？
+- `-e`增加环境变量
+- 这里还有一堆参数，请看`docker run`指令
+- 注意，`your-docker-image`后面还可以增加类似`/bin/bash`的指令，如果镜像是用Dockerfile打出来的话，这句话会覆盖你的`CMD`指令。
+
+```
+docker run -p 8080:80 -d daocloud.io/nginx
+
+docker pull foolishflyfox/leanote
+docker run -p 80:80 -d foolishflyfox/leanote
+```
+
+```
+docker run -d --name leanote \
+    -v `pwd`/db:/data/db \
+    -v `pwd`/conf/:/data/leanote/conf \
+    -p 80:80 \
+    foolishflyfox/leanote
+```
+
+```
+docker run -d --name note \
+    -v `pwd`/db:/data/db \
+    -v `pwd`/conf/:/data/leanote/conf \
+    -p 80:80 \
+    zengchw/leanote
+```
+
+
+
+## 同类应用
+
+### [[VNote–一个更懂程序员和Markdown的笔记软件](https://forum.suse.org.cn/t/topic/4833)]
+
+下载地址：https://github.com/tamlok/vnote/releases
+
+```
+C:\Users\ding\Documents\vnote_notebooks 所有笔记本都按默认路径存放
+c:%5CUsers%5Cding%5CDocuments%5Cvnote_notebooks
+应用目录
+D:\FTP\windows\VNote_win_X64_portable_2.8.2\VNote 当前
+D:\OneDrive\文档\vnotebook
+setCJKmainfont[BoldFont=simhei.ttf,ItalicFont=simkai.ttf]{simsun.ttc} pdf复制测试正常
+```
+

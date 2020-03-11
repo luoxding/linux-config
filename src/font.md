@@ -1,5 +1,49 @@
 # ubuntu 安装微软雅黑字体
 
+```
+## 微软雅黑
+wget https://github.com/luoxding/msyh/archive/master.zip
+unzip master.zip
+mv msyh-master /usr/share/fonts
+
+# 自动化
+wget https://github.com/luoxding/msyh/archive/master.zip && unzip master.zip && mv msyh-master /usr/share/fonts && fc-list :lang=zh
+
+# wget https://github.com/luoxding/chinese-fonts/archive/master.zip
+# unzip master.zip
+# ls
+# mv msyh-master /usr/share/fonts/chinese-fonts
+# mv chinese-fonts-master /usr/share/fonts/chinese-fonts
+
+wget https://github.com/luoxding/chinese-fonts/archive/master.zip && unzip master.zip && mv chinese-fonts-master /usr/share/fonts/chinese-fonts
+```
+
+
+
+## 中文字体配置
+
+```
+sudo apt-get -y install fontconfig xfonts-utils
+fc-list
+mkdir font
+cd font
+wget https://github.com/luoxding/chinese-fonts/archive/master.zip
+unzip master.zip
+cp ./Source* /usr/share/fonts/
+--------------------
+#以下这4条命令不一定要执行，然后建立字体索引信息，更新字体缓存，使用如下命令
+cd /usr/share/fonts/
+mkfontscale
+mkfontdir
+fc-cache
+--------------------
+fc-list :lang=zh
+----
+cp MSYH.TTF /usr/share/fonts/
+```
+
+
+
 解决 phantomjs 在ubuntu 下截图中文乱码
 首先在window下的 c://window/Fonts 中找出msyh.ttc和msya.ttf(最好是将所有关于msyh的)，将其拷贝出来
 
