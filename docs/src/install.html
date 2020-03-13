@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>一键脚本 · GitBook</title>
+        <title>linux系统安装 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="vps-module.html" />
+    <link rel="next" href="latex.html" />
     
     
-    <link rel="prev" href="Trilium_Notes.html" />
+    <link rel="prev" href="git.html" />
     
 
     </head>
@@ -336,7 +336,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.18" data-path="install.html">
+        <li class="chapter active" data-level="2.18" data-path="install.html">
             
                 <a href="install.html">
             
@@ -505,7 +505,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.31" data-path="v2ray.html">
+        <li class="chapter " data-level="2.31" data-path="v2ray.html">
             
                 <a href="v2ray.html">
             
@@ -633,7 +633,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >一键脚本</a>
+        <a href=".." >linux系统安装</a>
     </h1>
 </div>
 
@@ -648,10 +648,41 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="&#x4E00;&#x952E;&#x811A;&#x672C;">&#x4E00;&#x952E;&#x811A;&#x672C;</h2>
-<pre><code>apt-get update -y &amp;&amp; apt-get install curl -y
-bash &lt;(curl -s -L https://git.io/v2ray.sh)
-</code></pre>
+                                <h1 id="linux&#x7CFB;&#x7EDF;&#x5B89;&#x88C5;">linux&#x7CFB;&#x7EDF;&#x5B89;&#x88C5;</h1>
+<h2 id="manjaro">Manjaro</h2>
+<p>&#x53C2;&#x8003;</p>
+<ul>
+<li><p><a href="http://panqiincs.me/2019/06/05/after-installing-manjaro/" target="_blank">&#x5B89;&#x88C5;Manjaro&#x4E4B;&#x540E;&#x7684;&#x914D;&#x7F6E;</a></p>
+</li>
+<li><p><a href="https://zhuanlan.zhihu.com/p/83333669" target="_blank">manjaro &#x5B89;&#x88C5;&#x4E0E;&#x57FA;&#x7840;&#x8BBE;&#x7F6E;</a></p>
+</li>
+</ul>
+<pre><code>#&#x66F4;&#x6362;&#x56FD;&#x5185;&#x6E90;
+sudo pacman -Syy
+sudo pacman-mirrors -i -c China -m rank
+sudo pacman -Syyu
+#&#x6DFB;&#x52A0;arch&#x6E90;
+#&#x7F16;&#x8F91;/etc/pacman.conf&#x6587;&#x4EF6;&#xFF0C;&#x52A0;&#x5165;&#x4E0B;&#x9762;&#x7684;&#x5185;&#x5BB9;&#xFF1A;
+[archlinuxcn]
+SigLevel = Optional TrustedOnly
+Server = https://mirrors.sjtug.sjtu.edu.cn/archlinux-cn/$arch
+#&#x7136;&#x540E;
+sudo pacman -Syy &amp;&amp; sudo pacman -S archlinuxcn-keyring
+#&#x5347;&#x7EA7;&#x7CFB;&#x7EDF;
+sudo pacman -Su
+#&#x5B89;&#x88C5;&#x5E94;&#x7528;
+sudo pacman -S google-chrome
+#&#x4E2D;&#x6587;&#x8F93;&#x5165;&#x6CD5;
+sudo pacman -S fcitx-sogoupinyin
+sudo pacman -S fcitx-im
+sudo pacman -S fcitx-configtool
+#&#x8BBE;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF0C;&#x5728;~/.xprofile&#x6587;&#x4EF6;&#xFF08;&#x5982;&#x679C;&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;&#x5C31;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#xFF09;&#x672B;&#x5C3E;&#x52A0;&#x4E0A;&#xFF1A;
+#&#x201C;~/.xprofile&#x201D; &#x201C;/etc/environment&#x201D;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x7CFB;&#x7EDF;&#x53D8;&#x91CF;
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=&quot;@im=fcitx&quot;
+</code></pre><h2 id="ubuntu">Ubuntu</h2>
+
                                 
                                 </section>
                             
@@ -678,12 +709,12 @@ bash &lt;(curl -s -L https://git.io/v2ray.sh)
 
             
                 
-                <a href="Trilium_Notes.html" class="navigation navigation-prev " aria-label="Previous page: Trilium Notes">
+                <a href="git.html" class="navigation navigation-prev " aria-label="Previous page: Git">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="vps-module.html" class="navigation navigation-next " aria-label="Next page: 搬瓦工缺少的组件">
+                <a href="latex.html" class="navigation navigation-next " aria-label="Next page: latex应用">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -694,7 +725,7 @@ bash &lt;(curl -s -L https://git.io/v2ray.sh)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"一键脚本","level":"2.31","depth":1,"next":{"title":"搬瓦工缺少的组件","level":"2.32","depth":1,"path":"src/vps-module.md","ref":"src/vps-module.md","articles":[]},"previous":{"title":"Trilium Notes","level":"2.30","depth":1,"path":"src/Trilium_Notes.md","ref":"src/Trilium_Notes.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-comscore","auto-summary"],"pluginsConfig":{"auto-summary":{"parts":{"README.md":"简介","src/*.md":"Part I 学习笔记","code/*.md":"Part II 参考代码"}},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"src/v2ray.md","mtime":"2020-03-03T07:56:44.911Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-13T16:09:19.672Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"linux系统安装","level":"2.18","depth":1,"next":{"title":"latex应用","level":"2.19","depth":1,"path":"src/latex.md","ref":"src/latex.md","articles":[]},"previous":{"title":"Git","level":"2.17","depth":1,"path":"src/git.md","ref":"src/git.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["theme-comscore","auto-summary"],"pluginsConfig":{"auto-summary":{"parts":{"README.md":"简介","src/*.md":"Part I 学习笔记","code/*.md":"Part II 参考代码"}},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"src/install.md","mtime":"2020-03-13T15:59:48.176Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-13T16:09:19.672Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
