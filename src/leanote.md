@@ -60,12 +60,11 @@ $ D:\Soft\leanote\bin	# powershell管理员身份运行
   - 参考这个地址：[Leanote 源码版详细安装教程 Mac and Linux](https://github.com/leanote/leanote/wiki/Leanote-源码版详细安装教程----Mac-and-Linux)
 
 ```
-wget https://dl.google.com/go/go1.13.8.linux-amd64.tar.gz
-tar -xzvf go1.13.8.linux-amd64.tar.gz
+wget https://dl.google.com/go/go1.13.8.linux-amd64.tar.gz && tar -xzvf go1.13.8.linux-amd64.tar.gz
 mkdir gopackage
 ```
 
-配置环境变量, 编辑`/etc/profile`或`~/.bashrc`文件，我使用的是`~/.bashrc`：
+配置环境变量, 编辑`/etc/profile`或`~/.bashrc`文件，我使用的是`~/.bashrc`：使用系统变量`/etc/profile`才管用
 
 ```
 vim .bashrc
@@ -99,8 +98,7 @@ go version go1.8.4 linux/amd64
 
 ```
 wget https://github.com/leanote/leanote-all/archive/master.zip
-apt install unzip
-unzip master.zip 
+apt install unzip && unzip master.zip 
 #cp -r dir1/. dir2
 cp -r leanote-all-master/src/. gopackage 这个不对
 cp -r leanote-all-master/src gopackage 这个才对
@@ -138,6 +136,7 @@ source /etc/profile
 
 ```
 mkdir data
+screen -S go
 mongod --dbpath /root/data
 ```
 
@@ -166,10 +165,15 @@ mongorestore -h localhost -d leanote --dir /root/gopackage/src/github.com/leanot
 新开一个窗口, 运行:
 
 ```
+screen -S lea
 revel run github.com/leanote/leanote
 ```
 
 恭喜你, 打开浏览器输入: `http://localhost:9000` 体验Leanote吧!
+
+文件路径查询：
+
+`/root/gopackage/src/github.com/leanote/leanote/files/517/5368c1aa99c37b029d000001/85/images`
 
 ## 中文字体配置
 
@@ -399,9 +403,9 @@ nohup bash xxx/leanote/bin/run.sh > logs/leanote.log &
 
 ```
 wget https://github.com/justinchou/docker-leanote/archive/master.zip
-git clone https://github.com/justinchou/docker-leanote.git
-
-bash ./init.sh
+搬瓦工已测试没问题
+git clone https://github.com/justinchou/docker-leanote.git && cd docker-leanote && bash ./init.sh
+http://localhost:9000/index
 ```
 
 
@@ -419,14 +423,26 @@ mkdir -p ~/leanote/leanote-data/{files,mongodb_backup,public/upload}; cd ~/leano
 wget https://github.com/leanote/leanote/archive/master.zip
 unzip master.zip
 root@eisvogel:~/leanote/leanote-master/mongodb_backup# cp -r ./* ~/leanote/leanote-data/mongodb_backup
+====================================================
+#命令优化
+$ cd ~
+apt install unzip -y
+mkdir -p ~/leanote/leanote-data/{files,mongodb_backup,public/upload}
+wget https://github.com/leanote/leanote/archive/master.zip && unzip master.zip
+cp -r /root/leanote-master/mongodb_backup /root/leanote/leanote-data
+cp -r /root/leanote-master/public /root/leanote/leanote-data
+cp /root/leanote-master/conf/app.conf /root/leanote
+=========================================================
+https://github.com/leanote/leanote/blob/master/conf/app.conf
+wget重命名
 root@eisvogel:~/leanote/leanote-master/public# cp -r ./* ~/leanote/leanote-data/public
 root@eisvogel:~/leanote/leanote-master# cp -r conf ~/leanote
 root@eisvogel:~/leanote# mv leanote-master leanote
 
 RUN rm -rf /leanote/public
- 12 RUN rm -rf /leanote/mongodb_backup
- 13 RUN ln -s /leanote-data/public /leanote/public
- 14 RUN ln -s /leanote-data/mongodb_backup /leanote/mongodb_backup
+RUN rm -rf /leanote/mongodb_backup
+RUN ln -s /leanote-data/public /leanote/public
+RUN ln -s /leanote-data/mongodb_backup /leanote/mongodb_backup
  
  
 ```

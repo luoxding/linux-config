@@ -1,2 +1,2 @@
-rm -r _book
+rm -r _book docs
 gitbook build ./ ./docs
